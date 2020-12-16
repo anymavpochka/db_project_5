@@ -1,0 +1,693 @@
+
+{% extends 'index.html' %}
+{% block title%}Меню{% endblock %}
+{% block body %}
+
+
+				<section class="wrapper style1">
+					<div class="container">
+						<h7>Найпопулярніше</h7>
+					 <div class="row">
+
+
+							<section class="6u 12u(narrower)">
+								<div class="box post">
+                                   <a href="#" class="image left"><img src="../static/css/images/m01.jpg" class="imagen"/></a>
+									<div class="inner">
+										<h3>Гірос</h3>
+										<p>Оливковое масло, лимонный сок, чеснок, сушеный орегано, морская соль,
+											свежемолотый черный перец, помидоры.</p>
+									</div>
+                                    <div>Ціна: 100 грн</div>
+									{% if email != None%}
+                                        <form method="post">
+											<input type="hidden" name="index" value=1 >
+											<input type="hidden" name="item" value='Гірос' >
+                                        	<input type="submit" class="btn-success"  value="Замовити">
+										</form>
+									{% endif %}
+								</div>
+							</section>
+
+
+							<section class="6u 12u(narrower)">
+								<div class="box post">
+								<a href="#" class="image left"><img src="../static/css/images/m02.jpg" class="imagen" /></a>
+									<div class="inner">
+										<h3>Грецький салат</h3>
+										 <p>Оливковое масло, лимонный сок, чеснок, сушеный орегано, морская соль,
+											свежемолотый черный перец, помидоры.</p>
+									</div>
+                                    <div>Ціна: 100 грн</div>
+									{% if email != None%}
+								<form method="post">
+										<input type="hidden" name="index" value=2 >
+										<input type="hidden" name="item" value='Грецький салат' >
+                                        <input type="submit" class="btn-success" value="Замовити" >
+										</form>
+									{% endif %}
+								</div>
+							</section>
+
+
+							<section class="6u 12u(narrower)">
+								<div class="box post">
+									<a href="#" class="image left"><img src="../static/css/images/m03.jpg" class="imagen"/></a>
+									<div class="inner">
+										<h3>Мусака</h3>
+										<p>Оливковое масло, лимонный сок, чеснок, сушеный орегано, морская соль,
+											свежемолотый черный перец, помидоры.</p>
+									</div>
+                                    <div>Ціна: 100 грн</div>
+									{% if email != None%}
+                                       <form method="post">
+										   <input type="hidden" name="index" value=3 >
+										   <input type="hidden" name="item" value='Мусака' >
+                                        <input type="submit" class="btn-success"  value="Замовити">
+										</form>
+									{% endif %}
+								</div>
+							</section>
+
+
+							<section class="6u 12u(narrower)">
+								<div class="box post">
+									<a href="#" class="image left"><img src="../static/css/images/souvlaki.jpg" class="imagen" /></a>
+									<div class="inner">
+										<h3>Соулакі</h3>
+										<p>Оливковое масло, лимонный сок, чеснок, сушеный орегано, морская соль,
+											свежемолотый черный перец, помидоры.</p>
+									</div>
+                                    <div>Ціна: 100 грн</div>
+									{% if email != None%}
+                                        <form method="post">
+											<input type="hidden" name="index" value=4 >
+											<input type="hidden" name="item" value='Соулакі' >
+                                        <input type="submit" class="btn-success"   value="Замовити">
+										</form>
+									{% endif %}
+								</div>
+							</section>
+					 </div>
+					</div>
+				</section>
+
+<div id="salad">
+
+		<section class="wrapper style1">
+					<div class="container">
+						<h7>Салати</h7>
+					 <div class="row">
+
+						 <section class="6u 12u(narrower)" >
+								<div class="box post">
+                                    <a href="#" class="image left"><img src="../static/css/images/saladhalumi.jpg" class="imagen"/></a>
+									<div class="inner">
+										<h3>Гриль салат з сиром халумі</h3>
+										<p>Сир халумі, мікс салату, помідори, олія оливкова, лимонний сік,
+											горіх кедровий, свежемолотый черный перец, помидоры.</p>
+									</div>
+                                    <div>Ціна: 100 грн</div>
+									{% if email != None%}
+                                        <form method="post">
+											<input type="hidden" name="index" value=5 >
+                                            <input type="hidden" name="item" value='Гриль салат з сиром халумі' >
+                                        	<input type="submit" class="btn-success"  value="Замовити">
+										</form>
+									{% endif %}
+								</div>
+							</section>
+
+
+							<section class="6u 12u(narrower)" >
+								<div class="box post">
+									<a href="#" class="image left"><img src="../static/css/images/m02.jpg" class="imagen"/></a>
+									<div class="inner">
+										<h3>Грецький салат</h3>
+										 <p>Оливковое масло, лимонный сок, чеснок, сушеный орегано, морская соль,
+											свежемолотый черный перец, помидоры.</p>
+									</div>
+                                    <div>Ціна: 100 грн</div>
+									{% if email != None%}
+									<form method="post">
+										<input type="hidden" name="index" value=6 >
+                                        <input type="hidden" name="item" value='Грецький салат' >
+                                        <input type="submit" class="btn-success" value="Замовити" >
+										</form>
+									{% endif %}
+								</div>
+							</section>
+
+						    <section class="6u 12u(narrower)" >
+								<div class="box post">
+									<a href="#" class="image left"><img src="../static/css/images/saladmangal1.jpg" class="imagen" /></a>
+									<div class="inner">
+										<h3>Салат з печених овочів</h3>
+										<p>Баклажан перець болгарський, квасоля спаржева,
+											помідор, печериці, шпинат,
+											олія оливкова, соус соєвий</p>
+									</div>
+                                    <div>Ціна: 100 грн</div>
+									{% if email != None%}
+                                       <form method="post">
+										   <input type="hidden" name="index" value=7 >
+                                           <input type="hidden" name="item" value='Салат з печених овочів' >
+                                        <input type="submit" class="btn-success"  value="Замовити">
+										</form>
+									{% endif %}
+								</div>
+							</section>
+
+
+							<section class="6u 12u(narrower)" >
+								<div class="box post">
+									<a href="#" class="image left"><img src="../static/css/images/saladmussles.jpg" class="imagen" /></a>
+									<div class="inner">
+										<h3>Салат з мідіями</h3>
+										<p>Мідії, салат руккола, орех грецький,
+											оливки, помидори в'ялені, сир Фета,
+											помидори, масло оливкове, лимонний сок</p>
+									</div>
+                                    <div>Ціна: 100 грн</div>
+									{% if email != None%}
+                                        <form method="post">
+											<input type="hidden" name="index" value=8 >
+                                            <input type="hidden" name="item" value='Салат з мідіями' >
+                                        <input type="submit" class="btn-success"   value="Замовити">
+										</form>
+									{% endif %}
+								</div>
+
+							</section>
+
+					</div>
+					</div>
+				</section>
+</div>
+
+<div id="starters">
+
+
+		<section class="wrapper style1">
+					<div class="container">
+						<h7>Закуски</h7>
+					 <div class="row">
+
+
+
+
+						    <section class="6u 12u(narrower)" >
+								<div class="box post">
+                                    <a href="#" class="image left"><img src="../static/css/images/saganaki.jpg" class="imagen" /></a>
+									<div class="inner">
+										<h3>Саганакі</h3>
+										<p>Оливкове масло, Сир халумі,сиру фета (або бринза),рослинне масло для обсмажування,
+											1 яйце, мука</p>
+									</div>
+                                    <div>Ціна: 10 грн</div>
+									{% if email != None%}
+                                        <form method="post">
+											<input type="hidden" name="index" value=9 >
+                                            <input type="hidden" name="item" value='Саганакі' >
+                                        	<input type="submit" class="btn-success"  value="Замовити">
+										</form>
+									{% endif %}
+								</div>
+							</section>
+
+
+							<section class="6u 12u(narrower)" >
+								<div class="box post">
+									<a href="#" class="image left"><img src="../static/css/images/olive.jpg" class="imagen" /></a>
+									<div class="inner">
+										<h3>Брускети з оливковою пастою</h3>
+										 <p>Оливки каламата, часник,
+											 сушений орегано, морська сіль,
+											 чорний перець,  лимонний сік, духмяні трави, оливкова олія</p>
+									</div>
+                                    <div>Ціна: 10 грн</div>
+									{% if email != None%}
+									<form method="post">
+										<input type="hidden" name="index" value=10 >
+                                        <input type="hidden" name="item" value='Брускети з оливковою пастою' >
+                                        <input type="submit" class="btn-success" value="Замовити" >
+										</form>
+									{% endif %}
+								</div>
+							</section>
+
+					 </div>
+					</div>
+				</section>
+
+
+
+</div>
+
+<div id="pizza">
+		<section class="wrapper style1">
+					<div class="container">
+						<h7>Піца</h7>
+					 <div class="row">
+
+
+
+
+								<section class="6u 12u(narrower)" >
+								<div class="box post">
+                                    <a href="#" class="image left"><img src="../static/css/images/pizzamargarita.jpg" class="imagen" /></a>
+									<div class="inner">
+										<h3>Маргарита</h3>
+										<p>Моцарела, томатний соус, базилык, часник, тісто з цільнозенового борошна, духмяні трави, оливкова олія</p>
+									</div>
+                                    <div>Ціна: 100 грн</div>
+									{% if email != None%}
+                                        <form method="post">
+											<input type="hidden" name="index" value=11 >
+                                            <input type="hidden" name="item" value='Маргарита' >
+                                        	<input type="submit" class="btn-success"  value="Замовити">
+										</form>
+									{% endif %}
+								</div>
+							</section>
+
+
+							 <section class="6u 12u(narrower)" >
+								<div class="box post">
+									<a href="#" class="image left"><img src="../static/css/images/pizzapeperoni.jpg" class="imagen" /></a>
+									<div class="inner">
+										<h3>Пепероні з томатами</h3>
+										 <p>Моцарела, пепероні,
+											 помідори, соус Барбекю,
+											 тісто з цільнозенового борошна, духмяні трави, оливкова олія</p>
+									</div>
+                                    <div>Ціна: 100 грн</div>
+									{% if email != None%}
+									<form method="post">
+										<input type="hidden" name="index" value=12 >
+                                        <input type="hidden" name="item" value='Пепероні з томатами' >
+                                        <input type="submit" class="btn-success" value="Замовити" >
+										</form>
+									{% endif %}
+								</div>
+							</section>
+
+
+							 <section class="6u 12u(narrower)" >
+								<div class="box post">
+									<a href="#" class="image left"><img src="../static/css/images/pizzahavaii.jpg" class="imagen" /></a>
+									<div class="inner">
+										<h3>Гавайська</h3>
+										<p>Курка, ананас,
+											моцарела, томатний соус,
+											тісто з цільнозенового борошна, духмяні трави, оливкова олія</p>
+									</div>
+                                    <div>Ціна: 100 грн</div>
+									{% if email != None%}
+                                       <form method="post">
+										   <input type="hidden" name="index" value=13 >
+                                           <input type="hidden" name="item" value='Гавайська' >
+                                        <input type="submit" class="btn-success"  value="Замовити">
+										</form>
+									{% endif %}
+								</div>
+							</section>
+
+						 	 <section class="6u 12u(narrower)" >
+								<div class="box post">
+									<a href="#" class="image left"><img src="../static/css/images/pizzavegan.jpg" class="imagen"/></a>
+									<div class="inner">
+										<h3>Овочева Феєрія</h3>
+										<p>Оливки, цибуля, помідори, болгарський перець,
+											гриби, моцарела, томатний соус,
+											тісто з цільнозернового борошна</p>
+									</div>
+                                    <div>Ціна: 100 грн</div>
+									{% if email != None%}
+                                        <form method="post">
+											<input type="hidden" name="index" value=14 >
+                                            <input type="hidden" name="item" value='Овочева Феєрія' >
+                                        <input type="submit" class="btn-success"   value="Замовити">
+										</form>
+									{% endif %}
+								</div>
+							</section>
+
+					</div>
+					</div>
+				</section>
+
+
+</div>
+
+<div id="water">
+		<section class="wrapper style1">
+					<div class="container">
+						<h7>Вода</h7>
+					 <div class="row">
+
+
+
+
+						  <section class="6u 12u(narrower)"  >
+								<div class="box post">
+									<a href="#" class="image left"><img src="../static/css/images/m15.jpg" class="imagen" /></a>
+									<div class="inner">
+										<h3>Мінеральна вода Evian</h3>
+										<p>Негазована мінеральна вода Evian, видобувається в гірському районі Франції.
+											Тала вода Альп наповнює джерело.</p>
+									</div>
+                                    <div>Ціна: 10 грн</div>
+									{% if email != None%}
+                                        <form method="post">
+											<input type="hidden" name="index" value=15 >
+                                            <input type="hidden" name="item" value='Мінеральна вода Evian' >
+                                        <input type="submit" class="btn-success"   value="Замовити">
+										</form>
+									{% endif %}
+								</div>
+							</section>
+
+
+
+
+
+						 	<section class="6u 12u(narrower)">
+								<div class="box post">
+									<a href="#" class="image left"><img src="../static/css/images/m16.jpg" class="imagen" /></a>
+									<div class="inner">
+										<h3>Мінеральна вода Voss</h3>
+										<p>Негазована мінеральна вода Voss, народжена в найчистішому джерелі на землі в скелях і безкраїх льодах Норвегії.</p>
+									</div>
+                                    <div>Ціна: 10 грн</div>
+									{% if email != None%}
+                                        <form method="post">
+											<input type="hidden" name="index" value=16 >
+                                            <input type="hidden" name="item" value='Мінеральна вода Voss' >
+                                        <input type="submit" class="btn-success"   value="Замовити">
+										</form>
+									{% endif %}
+								</div>
+							</section>
+
+						 </div>
+					</div>
+				</section>
+
+
+
+</div>
+
+<div id="juice">
+
+		<section class="wrapper style1">
+					<div class="container">
+						<h7>Соки</h7>
+					 <div class="row">
+
+
+
+						 <section class="6u 12u(narrower)"  >
+								<div class="box post">
+									<a href="#" class="image left"><img src="../static/css/images/m17.jpg" class="imagen" /></a>
+									<div class="inner">
+										<h3>Яблучний фреш</h3>
+										<p>Фрешами називають свіжо зроблені соки. Користь натуральних соків безсумнівна - це концентрат
+											вітамінів і мінеральних речовин.</p>
+									</div>
+                                    <div>Ціна: 10 грн</div>
+									{% if email != None%}
+                                        <form method="post">
+											<input type="hidden" name="index" value=17 >
+                                            <input type="hidden" name="item" value='Яблучний фреш' >
+                                        <input type="submit" class="btn-success"   value="Замовити">
+										</form>
+									{% endif %}
+								</div>
+							</section>
+
+						 	<section class="6u 12u(narrower)"  >
+								<div class="box post">
+									<a href="#" class="image left"><img src="../static/css/images/m18.jpeg" class="imagen" /></a>
+									<div class="inner">
+										<h3>Апельсиновий фреш</h3>
+										<p>Фрешами називають свіжо зроблені соки. Користь натуральних соків безсумнівна - це концентрат
+											вітамінів і мінеральних речовин.</p>
+									</div>
+                                    <div>Ціна: 10 грн</div>
+									{% if email != None%}
+                                        <form method="post">
+											<input type="hidden" name="index" value=18 >
+                                            <input type="hidden" name="item" value='Апельсиновий фреш' >
+                                        <input type="submit" class="btn-success"   value="Замовити">
+										</form>
+									{% endif %}
+								</div>
+							</section>
+
+						 	<section class="6u 12u(narrower)"  >
+								<div class="box post">
+									<a href="#" class="image left"><img src="../static/css/images/m19.jpeg" class="imagen" /></a>
+									<div class="inner">
+										<h3>Ананасовий фреш</h3>
+										<p>Фрешами називають свіжо зроблені соки. Користь натуральних соків безсумнівна - це концентрат
+											вітамінів і мінеральних речовин.</p>
+									</div>
+                                   <div>Ціна: 10 грн</div>
+									{% if email != None%}
+                                        <form method="post">
+											<input type="hidden" name="index" value=19 >
+                                            <input type="hidden" name="item" value='Ананасовий фреш' >
+                                        <input type="submit" class="btn-success"   value="Замовити">
+										</form>
+									{% endif %}
+								</div>
+							</section>
+
+						 	<section class="6u 12u(narrower)"  >
+								<div class="box post">
+									<a href="#" class="image left"><img src="../static/css/images/m20.jpeg" class="imagen" /></a>
+									<div class="inner">
+										<h3>Морквяний фреш</h3>
+										<p>Фрешами називають свіжо зроблені соки. Користь натуральних соків безсумнівна - це концентрат
+											вітамінів і мінеральних речовин.</p>
+									</div>
+                                    <div>Ціна: 10 грн</div>
+									{% if email != None%}
+                                        <form method="post">
+											<input type="hidden" name="index" value=20 >
+                                            <input type="hidden" name="item" value='Морквяний фреш' >
+                                        <input type="submit" class="btn-success"   value="Замовити">
+										</form>
+									{% endif %}
+								</div>
+							</section>
+					 </div>
+					</div>
+				</section>
+
+
+</div>
+
+<div id="hot">
+
+
+		<section class="wrapper style1">
+					<div class="container">
+						<h7>Гарячі напої</h7>
+					 <div class="row">
+
+
+
+
+						 <section class="6u 12u(narrower)" >
+								<div class="box post">
+									<a href="#" class="image left"><img src="../static/css/images/blacktea.jpg" class="imagen" /></a>
+									<div class="inner">
+										<h3>Чорний чай</h3>
+										<p>Чорний чай найчастіше виробляють в Індії, Шрі-Ланці та Індонезії.
+											Вони виробляються з однієї рослини, але обробляють листя по-різному.
+											В результаті виходять різні продукти з унікальними властивостями.</p>
+									</div>
+                                    <div>Ціна: 10 грн</div>
+									{% if email != None%}
+                                        <form method="post">
+											<input type="hidden" name="index" value=21 >
+                                            <input type="hidden" name="item" value='Чорний чай' >
+                                        <input type="submit" class="btn-success"   value="Замовити">
+										</form>
+									{% endif %}
+								</div>
+							</section>
+
+
+						 	<section class="6u 12u(narrower)" >
+								<div class="box post">
+									<a href="#" class="image left"><img src="../static/css/images/greentea.jpg" class="imagen" /></a>
+									<div class="inner">
+										<h3>Зелений чай</h3>
+											<p>зелений чай найчастіше виробляють в країнах Далекого Сходу.
+											Вони виробляються з однієї рослини, але обробляють листя по-різному.
+											В результаті виходять різні продукти з унікальними властивостями.</p>
+									</div>
+                                    <div>Ціна: 10 грн</div>
+									{% if email != None%}
+                                        <form method="post">
+											<input type="hidden" name="index" value=22 >
+                                            <input type="hidden" name="item" value='Зелений чай' >
+                                        <input type="submit" class="btn-success"   value="Замовити">
+										</form>
+									{% endif %}
+								</div>
+							</section>
+						 </div>
+					</div>
+				</section>
+
+</div>
+
+<div id="cocktails">
+
+		<section class="wrapper style1">
+					<div class="container">
+						<h7>Коктелі</h7>
+					 <div class="row">
+
+
+						 <section class="6u 12u(narrower)"  >
+								<div class="box post">
+									<a href="#" class="image left"><img src="../static/css/images/mojito5.jpg" class="imagen" /></a>
+									<div class="inner">
+										<h3>Безалкогольний мохіто</h3>
+										<p>Мохіто — це солодкий коктейль.
+											Напій роблять з чотирьох інгредієнтів:
+											газована вода, цукор, лайм і листя солодкої м’яти.</p>
+									</div>
+                                    <div>Ціна: 10 грн</div>
+									{% if email != None%}
+                                        <form method="post">
+											<input type="hidden" name="index" value=23 >
+                                            <input type="hidden" name="item" value='Безалкогольний мохіто' >
+                                        <input type="submit" class="btn-success"   value="Замовити">
+										</form>
+									{% endif %}
+								</div>
+							</section>
+
+						 	<section class="6u 12u(narrower)"  >
+								<div class="box post">
+									<a href="#" class="image left"><img src="../static/css/images/strawberrymojito1.jpg" class="imagen" /></a>
+									<div class="inner">
+										<h3>Полуничний мохіто</h3>
+										<p>Мохіто — це солодкий коктейль.
+											Напій роблять з чотирьох інгредієнтів:
+											газована вода, цукор, лайм і листя солодкої м’яти.</p>
+									</div>
+                                    <div>Ціна: 10 грн</div>
+									{% if email != None%}
+                                        <form method="post">
+											<input type="hidden" name="index" value=24 >
+                                            <input type="hidden" name="item" value='Полуничний мохіто' >
+                                        <input type="submit" class="btn-success"   value="Замовити">
+										</form>
+									{% endif %}
+								</div>
+							</section>
+					</div>
+					</div>
+				</section>
+
+</div>
+
+
+<div id="alcohol">
+		<section class="wrapper style1">
+					<div class="container">
+						<h7>Алкогольні</h7>
+					 <div class="row">
+
+
+								<section class="6u 12u(narrower)"  >
+								<div class="box post">
+									<a href="#" class="image left"><img src="../static/css/images/mojito5.jpg" class="imagen" /></a>
+									<div class="inner">
+										<h3>Мохіто</h3>
+										<p>Мохіто — це солодкий коктейль.
+											Напій роблять з чотирьох інгредієнтів:
+											газована вода, цукор, лайм і листя солодкої м’яти.</p>
+									</div>
+                                    <div>Ціна: 10 грн</div>
+									{% if email != None%}
+                                        <form method="post">
+											<input type="hidden" name="index" value=25 >
+                                            <input type="hidden" name="item" value='Мохіто' >
+                                        <input type="submit" class="btn-success"   value="Замовити">
+										</form>
+									{% endif %}
+								</div>
+							</section>
+
+						 	<section class="6u 12u(narrower)"  >
+								<div class="box post">
+									<a href="#" class="image left"><img src="../static/css/images/m26.jfif" class="imagen" /></a>
+									<div class="inner">
+										<h3>Апероль Шприц</h3>
+										<p>Апероль Шприц - один з наймодніших літніх коктейлів в Європі.
+											Цей напій янтарно-оранжевого відтінку.</p>
+									</div>
+                                    <div>Ціна: 10 грн</div>
+									{% if email != None%}
+                                        <form method="post">
+											<input type="hidden" name="index" value=26 >
+                                            <input type="hidden" name="item" value='Апероль Шприц' >
+                                        <input type="submit" class="btn-success"   value="Замовити">
+										</form>
+									{% endif %}
+								</div>
+							</section>
+
+						 	<section class="6u 12u(narrower)"  >
+								<div class="box post">
+									<a href="#" class="image left"><img src="../static/css/images/m27.jfif" class="imagen" /></a>
+									<div class="inner">
+										<h3>Просекко</h3>
+										<p>Просекко виготовляють в аппелласьона Prosecco, які розкинулися відразу в двох північних регіонах Італії - Венето і Фріулі.</p>
+									</div>
+                                    <div>Ціна: 10 грн</div>
+									{% if email != None%}
+                                        <form method="post">
+											<input type="hidden" name="index" value=27 >
+                                            <input type="hidden" name="item" value='Просекко' >
+                                        <input type="submit" class="btn-success"   value="Замовити">
+										</form>
+									{% endif %}
+								</div>
+							</section>
+
+						 	<section class="6u 12u(narrower)"  >
+								<div class="box post">
+									<a href="#" class="image left"><img src="../static/css/images/m28.jfif" class="imagen" /></a>
+									<div class="inner">
+										<h3>Маргарита</h3>
+										<p>Коктейль, який містить текілу з додаванням соку лайма або лимона, цитрусового лікеру та льоду.</p>
+									</div>
+                                    <div>Ціна: 10 грн</div>
+									{% if email != None%}
+                                        <form method="post">
+											<input type="hidden" name="index" value=28 >
+                                            <input type="hidden" name="item" value='Маргарита' >
+                                        <input type="submit" class="btn-success"   value="Замовити">
+										</form>
+									{% endif %}
+								</div>
+							</section>
+
+
+                    </div>
+					</div>
+				</section>
+</div>
+
+
+
+{% endblock %}

@@ -1,0 +1,118 @@
+{% extends 'index.html' %}
+{% block title%}Замовлення{% endblock %}
+{% block body %}
+
+<section class="wrapper style1" >
+{% if orders != [] and orders!= 'abs' %}
+    <div class="container">
+        <div class="shopping-cart">
+            <div class="or"> Формування замовлення</div>
+
+
+
+
+{%for order in orders%}
+
+            <pad>
+<table class="table">
+  <tbody>
+    <tr>
+        <td>Замовлення: {{order[0]}} </td>
+        <td>Cума: {{order[1]}} грн</td>
+
+      <td>
+          <form method="post">
+                        <input type="hidden" name="deletee" value='on' >
+                        <input type="hidden" name="item" value="{{order[0]}}" >
+                     <input type="submit"  value = 'X' class="btn-success">
+          </form>
+      </td>
+    </tr>
+
+    </tbody>
+    </table>
+        </pad>
+
+
+{%endfor%}
+
+
+
+    <section class="wrapper">
+
+        <form id="order" method="post" >
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <script>
+  	$(function()
+  	  {
+  	    var xxx = $("#333");
+  	    xxx.change(function()
+  	      {
+  	        var names = '';
+  	        $('option:selected', xxx).each(function() {names += this.value;});
+  	        $('#text_comment').html(names);
+  	      }
+  	    );
+  	  }
+  	);
+  </script>
+
+
+           <label>Оберіть знижку:</label>
+                    <select id="333" type="sale" name="sale">
+
+                        <option value={{summ}} >Без знижок</option>
+
+
+                        <option value={{dis_sum}} >Накопичені бонуси</option>
+
+                    </select>
+
+
+            <label>Оберіть номер столу:</label>
+                    <select name="table" type="table" required>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                    </select>
+
+
+            <label>Оберіть вид розрахунку:</label>
+                    <select type="pay">
+                        <option value="pay1">Готівка</option>
+                        <option value="pay2">Безготівкова</option>
+                    </select>
+
+
+            <div class="totalprice">
+                <div>Загальна сума до оплати: </div>
+                <div id="text_comment"> {{summ}}</div>
+                <div>грн</div>
+            </div>
+
+            <input type="hidden" name="item" value='0' >
+            <input type="hidden" name="deletee" value='off' >
+            <div class="tran"><input type="submit" class="btn-success" value="Замовити"></div>
+
+        </form>
+    </section>
+
+
+
+{% elif orders == 'abs' %}
+<div class="com"> <a><h1>Чекайте на замовлення</h1></a></div>
+{% elif email == None %}
+<div class="com"> <a><h1>Замовлення та переглядати для зареестрованих користувачів</h1></a></div>
+{% else %}
+<div class="com"> <a><h1>Корзина порожня</h1></a></div>
+{% endif %}
+</div>
+</div>
+</section>
+
+{% endblock %}
+

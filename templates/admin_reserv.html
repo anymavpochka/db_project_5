@@ -1,0 +1,39 @@
+{% extends 'index.html' %}
+{% block title%}Резервація{% endblock %}
+{% block body %}
+
+    <section class="wrapper style1">
+    <div class="container">
+{%if data == 'no_data'%}
+
+       <div>Резервації відсутні</div>
+        {%else%}
+        {%for user in data%}
+        <table class="table">
+  <tbody>
+    <tr>
+        <td><div>Резервація клієнтом {{user[0]}} столу №{{user[3]}}</div>
+            <div>на {{user[1]}} о {{user[2]}}</div>
+        </td>
+      <td>
+          <div class="adm_or">
+          <form method="post">
+                        <input type="hidden" name="delete" value='on' >
+                        <input type="hidden" name="item" value= {{user[4]}} >
+                        <input type="submit"  value = 'Обслуговано' class="btn-success">
+                </form>
+              </div>
+      </td>
+
+    </tr>
+  </tbody>
+</table>
+
+        {%endfor%}
+{%endif%}
+
+</div>
+</section>
+
+
+{% endblock %}

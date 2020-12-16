@@ -1,0 +1,49 @@
+{% extends 'index.html' %}
+{% block title%}Реєстрація{% endblock %}
+{% block body %}
+
+    <section class="wrapper style1">
+    <div class="container">
+{%if act == 'off'%}
+	        <form method="post">
+                 {% if action == 1%}
+                <div class="com"><a><h1>Перевірьте, чи всі поля введені правильно!</h1></a></div>
+                {% elif action == 2%}
+                <div class="com"><a><h1>Користувач з таким email-ом вже зареєстрований</h1></a></div>
+				{% endif %}
+
+		        <label for="email">Email:</label>
+                    <input type="text" name="email" pattern="[a-zA-Z0-9!#$%&'*+\/=?^_`{|}~.-]+@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)*" class="placeholder" placeholder="admin@example.com" required>
+
+		        <label for="password">Password:</label>
+                    <input type="password" name="password" class="placeholder" placeholder="Введіть пароль..." required>
+
+                <label for="password">Password:</label>
+                    <input type="password" name="confirm_password" class="placeholder" placeholder="Повторіть пароль..." required>
+
+                <label for="name">Name:</label>
+                    <input type="text" name="name" class="placeholder" placeholder="admin" required>
+
+                <label for="date">Дата народження: </label>
+                    <input type="date" id="date" name="birthday" required>
+
+                <div class="tran">
+                    <input type="submit" class="btn-success" value="Зареєструвати">
+                    </div>
+
+
+	        </form>
+
+        {%else%}
+        {%for i in user%}
+        <div class="comm">Додано користувача</div>
+        <div class="comm">Ім'я: {{i.name}}</div>
+        <div class="comm">Email: {{i.email}}</div>
+        <div class="comm">Дата народження: {{i.birthday}}</div>
+        {%endfor%}
+        {%endif%}
+    </div>
+
+    </section>
+
+{% endblock %}

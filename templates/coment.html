@@ -1,0 +1,47 @@
+{% extends 'index.html' %}
+{% block title%}Відгуки{% endblock %}
+{% block body %}
+
+
+    <section class="wrapper style1">
+    <div class="container">
+	        <form method="post">
+
+
+		        <label for="comment">Коментар:</label>
+                    <input type="text" name="comment"  placeholder="Введіть відгук" required>
+
+                    {% if action == 1%}
+            <div class="com"> <a><h1>Залишати відгуки можуть лише зареєстровані користувачі!</h1></a></div>
+            {% endif %}
+                <div class="tran"><input type="submit" value="Надіслати"></div>
+	        </form>
+        <pad>
+        <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Ім'я</th>
+      <th scope="col">Коментар</th>
+      <th scope="col">Дата</th>
+    </tr>
+  </thead>
+        </table>
+           {% for comment in comments %}
+       <table class="table">
+  <tbody>
+    <tr>
+      <td>{{comment.name}}</td>
+      <td>{{comment.comment}}</td>
+      <td>{{comment.date}}</td>
+    </tr>
+  </tbody>
+</table>
+</pad>
+
+
+            {% endfor %}
+    </div>
+    </section>
+
+
+{% endblock %}

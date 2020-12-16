@@ -1,0 +1,51 @@
+{% extends 'index.html' %}
+{% block title%}Профіль{% endblock %}
+{% block body %}
+
+
+
+
+
+ <section class="wrapper style1">
+    <div class="container">
+
+{% if email == None%}
+<label>зареєструйтесь чи увійдіть в аккаунт</label>
+{% elif email != None%}
+        <div class="com_main" >Особисті дані користувача профілю:</div>
+        {% for i in user%}
+        <div class="comm">Ім'я: {{i.name}}</div>
+        <div class="comm">Email: {{i.email}}</div>
+        <div class="comm">Дата народження: {{i.birthday}}</div>
+        <div class="comm">Знижка: {{i.discount}} %</div>
+        <div class="comm">Сума за всі замовлення: {{i.total_order_amount}} грн </div>
+        <div class="prof_com">Якщо інформація застаріла, внесіть зміни у поля</div>
+        {% endfor %}
+
+	        <form method="post">
+
+		        <label for="username">Email:</label>
+                    <input type="text" name="email" class="placeholder" placeholder={{email}}>
+
+                <label for="name">Name:</label>
+                    <input type="text" name="name" class="placeholder" placeholder={{name}}>
+
+		        <label for="password">Password:</label>
+                    <input type="password" name="password" class="placeholder" placeholder="Введіть пароль...">
+
+                <label for="date">Дата народження: </label>
+                    <input type="date" id="date" name="birthday" class="placeholder" placeholder=''/>
+        <div class="tran">
+        <input type="submit" value="Оновити">
+            </div>
+	        </form>
+
+    </div>
+    </section>
+{% endif %}
+
+
+
+
+
+{% endblock %}

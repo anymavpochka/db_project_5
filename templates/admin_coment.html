@@ -1,0 +1,37 @@
+{% extends 'index.html' %}
+{% block title%}Відгуки{% endblock %}
+{% block body %}
+
+
+    <section class="wrapper style1">
+    <div class="container">
+
+        <pad>
+        <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Ім'я</th>
+      <th scope="col">Коментар</th>
+      <th scope="col">Дата</th>
+    </tr>
+  </thead>
+        </table>
+           {% for comment in comments %}
+       <table class="table">
+  <tbody>
+    <tr>
+      <td>{{comment.name}}</td>
+      <td>{{comment.comment}}</td>
+      <td>{{comment.date}}</td>
+    </tr>
+  </tbody>
+</table>
+</pad>
+
+        <!-- <p>{{comment.name}}   {{comment.comment}}   {{comment.date}}</p>-->
+            {% endfor %}
+    </div>
+    </section>
+
+
+{% endblock %}

@@ -1,0 +1,49 @@
+{% extends 'index.html' %}
+{% block title%}Резервування{% endblock %}
+{% block body %}
+<section class="wrapper style1">
+    <div class="container">
+        {%if email != None%}
+{% if check == [] %}
+        <form method="post">
+
+
+            <label>Оберіть дату:</label>
+            <input type="date" id="date" name="date" value='{{c_date}}' min="{{c_date}}" max="{{future}}" >
+
+            <label>Оберіть час:</label>
+            <input type="time" name="time" value='{{c_time}}' min="08:10" max="20:00">
+
+
+
+            <label>Оберіть номер столу:</label>
+                    <select name="table" type="table" required>
+                        <!--<option value="0">Номер</option>-->
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                    </select>
+
+
+
+<div class="tran"><input type="submit" value="Забронювати стіл"></div>
+
+        </form>
+        {% else %}
+    {%for i in check%}
+<div class="c">
+        <div class="comm">Ви зарезервували столик № {{i.table}} на {{i.date}} о {{i.time}} годині.</div>
+        <div class="comm">Girl`sCafe чекає на найскорішу зустріч з Вами!</div>
+    </div>
+
+    {%endfor%}
+        {% endif %}
+{%else%}
+         <div class="com"> <a><h1>Резервувати столик можуть лише зареєстровані користувачі!</h1></a></div>
+{% endif %}
+</div>
+</section>
+{% endblock %}

@@ -1,0 +1,44 @@
+{% extends 'index.html' %}
+{% block title%}Замовлення{% endblock %}
+{% block body %}
+
+
+
+   <section class="wrapper style1">
+    <div class="container">
+        <div class="shopping-cart">
+{%if data == 'no_orders'%}
+            <div class="com"> <a><h1>Замовлення відсутні</h1></a></div>
+{%else%}
+ <div class="or"> Формування замовлення</div>
+<pad>
+<table style="width: 100%" >
+  <tbody>
+  {%for user in data%}
+<tr>
+        <td style="width: 20%">Замовлення: {{user[2]}}</td>
+        <td style="width: 20%">Клієнт: {{user[1]}}</td>
+        <td style="width: 20%">Столик №{{user[4]}}</td>
+        <td style="width: 20%">Сума: {{user[3]}} грн</td>
+
+      <td style="width: 20%">
+          <form method="post">
+                <input type="hidden" name="delete" value='on' >
+                <input type="hidden" name="item" value= {{user[0]}} >
+                <input type="submit"  value = 'Оплачено' class="btn-success">
+           </form>
+      </td>
+</tr>
+ {%endfor%}
+
+
+{%endif%}
+  </tbody>
+</table>
+</pad>
+
+</div>
+</div>
+</section>
+
+{% endblock %}

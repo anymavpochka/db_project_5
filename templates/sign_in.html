@@ -1,0 +1,40 @@
+{% extends 'index.html' %}
+{% block title%}Вход{% endblock %}
+{% block body %}
+
+    <section class="wrapper style1">
+    <div class="container">
+
+        {% if action == 1%}
+        <div class="com"><a><h1>Перевірьте, чи всі поля введені правильно!</h1></a></div>
+        {% endif %}
+
+	        <form method="post">
+
+		        <label for="username">Email:</label>
+                    <input type="text" name="email" class="placeholder" placeholder="admin@example.com" required>
+
+
+		        <label for="password">Password:</label>
+                    <input type="password" name="password" class="placeholder" placeholder="Введіть пароль..." required>
+
+                <div class="tran">
+                    <input type="submit" href="sign_up.html"  value="Увійти">
+                 </div>
+                 <div class="trans">
+                      <!--<w><button type="button" class="btn-success"><a href="sign_up.html">Зареєструватись</a></button><w>-->
+                    <a type="submit" class="btn-success" href="sign_up.html" >Зареєструватись</a>
+                </div>
+
+
+	        </form>
+
+    </div>
+    </section>
+
+
+
+
+
+
+{% endblock %}
